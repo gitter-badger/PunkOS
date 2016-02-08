@@ -1,2 +1,5 @@
 # PunkOS
-[![Build Status](https://travis-ci.org/zarlo/PunkOS.svg)](https://travis-ci.org/zarlo/PunkOS)
+| Version | Build Type | Download |
+|---------|------------|----------|
+| 0.0.1   | debug      | nul      |
+|         |            |          |
