@@ -3,13 +3,14 @@ using Sys = Cosmos.System;
 
 namespace PunkOS.HAL.Drivers.Display
 {
-    public class VGADisplayDriver
+    public class DisplayDriver
     {
         
         protected VGAScreen screen;
-        private int width, height;
+    
+    private int width, height;
 
-        public VGADisplayDriver()
+        public DisplayDriver()
         {
             screen = new VGAScreen();
         }

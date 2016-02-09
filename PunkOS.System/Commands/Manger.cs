@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace PunkOS.System.Commands
 {
-  class Manger
+  public class Manger
   {
 
+    public Manger(){}
 
+    public virtual void run(string[] CMD) {
+
+
+
+    }
 
   }
 }

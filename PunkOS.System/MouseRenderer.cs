@@ -12,10 +12,10 @@ namespace PunkOS.System
     {
 
         private MouseDriver mouse;
-        private VGADisplayDriver display;
+        private DisplayDriver display;
         private int color;
 
-        public MouseRenderer(MouseDriver m, VGADisplayDriver d, int c = 2)
+        public MouseRenderer(MouseDriver m, DisplayDriver d, int c = 2)
         {
             mouse = m;
             display = d;

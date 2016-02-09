@@ -11,10 +11,10 @@ namespace PunkOS.System.Manger
     {
 
 
-        private VGADisplayDriver driver;
+        private DisplayDriver driver;
         private Picture Picture;
 
-        public PictureManger(VGADisplayDriver dd, Picture f)
+        public PictureManger(DisplayDriver dd, Picture f)
         {
             driver = dd;
             Picture = f;

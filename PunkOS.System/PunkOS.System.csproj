@@ -43,11 +43,10 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Commands\Commands.cs" />
     <Compile Include="Commands\Manger.cs" />
-    <Compile Include="Manger\CommandManger.cs" />
     <Compile Include="Manger\PictureManger.cs" />
     <Compile Include="Manger\Picture.cs" />
     <Compile Include="Manger\ProgramManger.cs" />
-    <Compile Include="Manger\VGADisplayManger.cs" />
+    <Compile Include="Manger\DisplayManger.cs" />
     <Compile Include="Manger\Font.cs" />
     <Compile Include="Manger\FontManger.cs" />
     <Compile Include="MouseRenderer.cs" />

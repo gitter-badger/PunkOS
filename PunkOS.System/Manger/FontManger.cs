@@ -11,11 +11,11 @@ namespace PunkOS.System.Manger
     {
 
 
-        private VGADisplayDriver driver;
+        private DisplayDriver driver;
         private Font font;
         private int stdColor = 2;
 
-        public FontManger(VGADisplayDriver dd, Font f, int sc = 2)
+        public FontManger(DisplayDriver dd, Font f, int sc = 2)
         {
             driver = dd;
             font = f;

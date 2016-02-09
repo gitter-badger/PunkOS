@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PunkOS.System.Commands
 {
-  class Commands
+  public class Commands
   {
 
     public static void print(string s)
