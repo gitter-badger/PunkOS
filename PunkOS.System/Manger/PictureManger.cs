@@ -21,9 +21,9 @@ namespace PunkOS.System.Manger
         }
 
 
-        public void renderPicture(int x, int y, string c)
+        public void renderPicture(int x, int y, string pic)
         {
-            int[] charArray = Picture.getPicture(c);
+            int[] charArray = Picture.getPicture(pic);
             for (int i = 0; i < Picture.Size; i++)
             {
                 for (int j = 0; j < Picture.Size; j++)

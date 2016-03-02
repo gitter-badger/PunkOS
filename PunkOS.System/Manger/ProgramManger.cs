@@ -12,15 +12,10 @@ namespace PunkOS.System.Manger
     public static void runfile(string file)
     {
 
-
-
-    }
-
-    public static void runString(string s) {
-      
-      
+           
 
     }
+        
 
 
   }

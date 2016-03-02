@@ -65,9 +65,9 @@
     <Reference Include="Cosmos.Debug.Kernel.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PunkOS\PunkOS.csproj">
-      <Name>PunkOS</Name>
-      <Project>{236c97c8-af1f-423f-9793-4a7214d2ff74}</Project>
+    <ProjectReference Include="..\PunkOS  CMD\PunkOS  CMD.csproj">
+      <Name>PunkOS  CMD</Name>
+      <Project>{4bb5aec6-f97f-4c00-8c32-4cb304371bf5}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>

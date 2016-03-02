@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B847884A-8F96-4A3B-B3F1-646836D3D57E}</ProjectGuid>
+    <ProjectGuid>{236C97C8-AF1F-423F-9793-4A7214D2FF74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PunkOS.System</RootNamespace>
-    <AssemblyName>PunkOS.System</AssemblyName>
+    <RootNamespace>PunkOS</RootNamespace>
+    <AssemblyName>PunkOS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -33,6 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cosmos.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86" />
+    <Reference Include="Cosmos.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86" />
+    <Reference Include="Cosmos.Core.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86" />
+    <Reference Include="Cosmos.System.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -40,27 +43,20 @@
     <Reference Include="Cosmos.Debug.Kernel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Font.cs" />
+    <Compile Include="Kernel.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="loginSystem.cs" />
-    <Compile Include="Manger\CommandManger.cs" />
-    <Compile Include="FAT.cs" />
-    <Compile Include="Manger\PictureManger.cs" />
-    <Compile Include="Manger\Picture.cs" />
-    <Compile Include="Manger\ProgramManger.cs" />
-    <Compile Include="Manger\DisplayManger.cs" />
-    <Compile Include="Manger\Font.cs" />
-    <Compile Include="Manger\FontManger.cs" />
-    <Compile Include="MouseRenderer.cs" />
+    <Compile Include="Logo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PunkOS.HAL\PunkOS.HAL.csproj">
       <Project>{65bdbb5c-3967-4cbd-86c6-0b6a3b015a7f}</Project>
       <Name>PunkOS.HAL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Form\" />
+    <ProjectReference Include="..\PunkOS.System\PunkOS.System.csproj">
+      <Project>{b847884a-8f96-4a3b-b3f1-646836d3d57e}</Project>
+      <Name>PunkOS.System</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
