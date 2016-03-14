@@ -67,7 +67,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PunkOS  CMD\PunkOS  CMD.csproj">
       <Name>PunkOS  CMD</Name>
-      <Project>{4bb5aec6-f97f-4c00-8c32-4cb304371bf5}</Project>
+      <Project>{ceb4e26c-ac73-4a53-8262-2fe8cbcae423}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>

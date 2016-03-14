@@ -10,23 +10,23 @@ namespace PunkOS
 {
     public class Kernel : Sys.Kernel
     {
-        private VFSBase myVFS;
+        //private VFSBase myVFS;
         private string[] UserData;
         protected override void BeforeRun()
         {
-            
+
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("              ");
 
-            mDebugger.Send("Setting up VFS");
-            myVFS = new CosmosVFS();
-            VFSManager.RegisterVFS(myVFS);
+ 
+            //myVFS = new CosmosVFS();
+            //VFSManager.RegisterVFS(myVFS);
 
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("      ##      ");
-                        
+
 
 
             Console.Clear();
@@ -46,7 +46,7 @@ namespace PunkOS
             Console.WriteLine("  ##########  ");
 
 
-            
+
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("##############");
@@ -72,8 +72,8 @@ namespace PunkOS
                 System.Manger.CommandManger.run(input);
 
             } while (true);
-            
-            
+
+
         }
     }
 }

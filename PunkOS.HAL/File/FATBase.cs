@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PunkOS.HAL.File;
 
-namespace PunkOS.System
+namespace PunkOS.HAL.File
 {
-    public class FAT : FATBase
+   public class FATBase
     {
-
     }
 }

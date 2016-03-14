@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{b1b7ed1b-be9e-45ef-8368-c51b16316613}</ProjectGuid>
+    <ProjectGuid>{741a2564-380a-4460-8939-fb3d82c0852e}</ProjectGuid>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <Name>PunkOS  CMDBoot</Name>
     <BinFormat>elf</BinFormat>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Profile>VMware</Profile>
@@ -30,7 +30,7 @@
   <ItemGroup>
     <ProjectReference Include=".\PunkOS  CMD.csproj">
       <Name>PunkOS  CMD</Name>
-      <Project>{4bb5aec6-f97f-4c00-8c32-4cb304371bf5}</Project>
+      <Project>{ceb4e26c-ac73-4a53-8262-2fe8cbcae423}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
