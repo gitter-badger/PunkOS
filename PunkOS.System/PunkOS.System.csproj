@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="IO\Flie.cs" />
+    <Compile Include="IO\Path.cs" />
+    <Compile Include="LoginSystem.cs" />
     <Compile Include="Manger\CommandManger.cs" />
-    <Compile Include="FAT.cs" />
     <Compile Include="Manger\PictureManger.cs" />
     <Compile Include="Manger\Picture.cs" />
     <Compile Include="Manger\ProgramManger.cs" />

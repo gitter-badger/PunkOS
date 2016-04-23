@@ -17,7 +17,7 @@ namespace PunkOS
 
     private readonly Debugger mDebugger = new Debugger("User", "Test");
 
-    public DisplayDriver screen;
+    public DisplayManger screen;
 
     public MouseDriver mouse;
     public MouseRenderer mr;

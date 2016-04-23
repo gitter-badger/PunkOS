@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Sys = Cosmos.System;
 
-namespace PunkOS_BIN
+namespace PunkOS
 {
     public class Kernel : Sys.Kernel
     {

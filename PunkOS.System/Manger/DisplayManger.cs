@@ -13,9 +13,6 @@ namespace PunkOS.System.Manger
     private readonly Debugger mDebugger = new Debugger("User", "System.Manger");
     byte[] buffer = new byte[320 * 200];
     public bool didChange = false;
-    public int changeX, changeY;
-    byte[] change = new byte[320 * 200];
-    public int changec;
 
     public DisplayManger() : base()
     {
@@ -26,18 +23,10 @@ namespace PunkOS.System.Manger
 
     override public void setPixel(int x, int y, int c)
     {
-      int math = x + y * 320;
-      if (getPixel(x, y) != (byte)c)
-      {
-        changec++;
+
         buffer[x + (y * 320)] = (byte)c;
         didChange = true;
-        change[changec] = (byte)math;
-        if (x > changeX)
-          changeX = x + 1;
-        if (y > changeY)
-          changeY = y + 1;
-      }
+
     }
 
     public override byte getPixel(int x, int y)
@@ -88,8 +77,7 @@ namespace PunkOS.System.Manger
 
           }
         }
-        changeX = 0;
-        changeY = 0;
+
         clear(0);
       }
 

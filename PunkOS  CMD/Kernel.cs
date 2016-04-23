@@ -10,7 +10,7 @@ namespace PunkOS
 {
     public class Kernel : Sys.Kernel
     {
-        //private VFSBase myVFS;
+        private VFSBase myVFS;
         private string[] UserData;
         protected override void BeforeRun()
         {
@@ -19,9 +19,10 @@ namespace PunkOS
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("              ");
 
- 
-            //myVFS = new CosmosVFS();
-            //VFSManager.RegisterVFS(myVFS);
+            //System.LoginSystem.Init();
+
+            myVFS = new CosmosVFS();
+            VFSManager.RegisterVFS(myVFS);
 
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
@@ -52,26 +53,31 @@ namespace PunkOS
             Console.WriteLine("##############");
 
             Console.Clear();
-            Console.WriteLine("PunkOS Login");
-            Console.WriteLine("Username:");
-            Console.ReadLine();
-            Console.WriteLine("Password:");
-            Console.ReadLine();
+            //Console.WriteLine("PunkOS Login");
+            //Console.WriteLine("Username:");
+            //string user = Console.ReadLine();
+            //mDebugger.Send(user);
+            //Console.WriteLine("Password:");
+            //string pass = Console.ReadLine();
+            //mDebugger.Send(pass);
             Console.Clear();
+            //login code
+            Console.WriteLine("PunkOS 0.0.1");
         }
 
         protected override void Run()
         {
 
-            Console.WriteLine("PunkOS 0.0.1");
-            do
-            {
+            
+            Console.ReadLine();
+            //do
+            //{
+            //Console.Write("$>");
+            //var input = Console.ReadLine();
+            //Console.WriteLine(input);
+            //System.Manger.CommandManger.run(input);
 
-                var input = Console.ReadLine();
-
-                System.Manger.CommandManger.run(input);
-
-            } while (true);
+            //} while (true);
 
 
         }

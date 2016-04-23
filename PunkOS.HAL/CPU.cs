@@ -1,5 +1,4 @@
 ﻿
-
 namespace PunkOS.HAL
 {
     public class CPU
