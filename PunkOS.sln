@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PunkOS  GUI", "PunkOS  GUI\PunkOS  GUI.csproj", "{236C97C8-AF1F-423F-9793-4A7214D2FF74}"
 EndProject
@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PunkOS  CMD", "PunkOS  CMD\
 	EndProjectSection
 EndProject
 Project("{471EC4BB-E47E-4229-A789-D1F5F83B52D4}") = "PunkOSBoot", "PunkOS\PunkOSBoot.Cosmos", "{1B4E3F2F-A855-4696-82EC-FED11CA5930A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programs", "Programs\Programs.csproj", "{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,14 @@ Global
 		{1B4E3F2F-A855-4696-82EC-FED11CA5930A}.Release|Any CPU.Build.0 = Debug|x86
 		{1B4E3F2F-A855-4696-82EC-FED11CA5930A}.Release|x86.ActiveCfg = Debug|x86
 		{1B4E3F2F-A855-4696-82EC-FED11CA5930A}.Release|x86.Build.0 = Debug|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Debug|Any CPU.Build.0 = Debug|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Debug|x86.ActiveCfg = Debug|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Debug|x86.Build.0 = Debug|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Release|Any CPU.ActiveCfg = Release|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Release|Any CPU.Build.0 = Release|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Release|x86.ActiveCfg = Release|x86
+		{9EDD4C98-6767-436B-B8D9-1AF138E42A5F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

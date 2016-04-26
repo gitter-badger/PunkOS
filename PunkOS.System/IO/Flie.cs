@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sys = System.IO;
-using g = System;
+
 
 namespace PunkOS.System.IO
 {
