@@ -45,13 +45,14 @@
     <Compile Include="IO\Flie.cs" />
     <Compile Include="IO\Path.cs" />
     <Compile Include="LoginSystem.cs" />
-    <Compile Include="Manger\CommandManger.cs" />
-    <Compile Include="Manger\PictureManger.cs" />
-    <Compile Include="Manger\Picture.cs" />
-    <Compile Include="Manger\ProgramManger.cs" />
-    <Compile Include="Manger\DisplayManger.cs" />
-    <Compile Include="Manger\Font.cs" />
-    <Compile Include="Manger\FontManger.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Utils\CommandManger.cs" />
+    <Compile Include="Utils\PictureManger.cs" />
+    <Compile Include="Utils\Picture.cs" />
+    <Compile Include="Utils\ProgramManger.cs" />
+    <Compile Include="Utils\DisplayManger.cs" />
+    <Compile Include="Utils\Font.cs" />
+    <Compile Include="Utils\FontManger.cs" />
     <Compile Include="MouseRenderer.cs" />
   </ItemGroup>
   <ItemGroup>

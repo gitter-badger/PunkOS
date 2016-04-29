@@ -9,14 +9,15 @@ namespace PunkOS.HAL.Drivers.Display
     private readonly Debugger mDebugger = new Debugger("User", "HAL");
     protected VGAScreen screen;
 
-    private int width, height;
+    protected static int width, height;
 
     public DisplayDriver()
     {
       screen = new VGAScreen();
+            
     }
 
-    public void init()
+    public virtual void init()
     {
       mDebugger.Send("Setting up DisplayDriver");
       screen.SetGraphicsMode(VGAScreen.ScreenSize.Size320x200, VGAScreen.ColorDepth.BitDepth8);

@@ -1,21 +1,35 @@
 ﻿using System;
-using System.Collections;
+
 namespace PunkOS.System
 {
     public class LoginSystem
     {
+        private static Boolean hasInt = false;
         protected static string userlogedin;
-        private static Hashtable users = new Hashtable();
-        private static Hashtable ranks = new Hashtable();
-        private static Hashtable trys = new Hashtable();
+        //Not Used
+        //private static Hashtable users = new Hashtable();
+        //private static Hashtable ranks = new Hashtable();
+        //private static Hashtable trys = new Hashtable();
+        //=========
+        private static string path = @"0:/System/UserData.Sys";
         public static void Init()
         {
+            //users.Add("System", "☺");
+            //ranks.Add("System", 0);
+            if (IO.File.Exists(path))
+            {
 
-            users.Add("System", "☺");
-            ranks.Add("System", 0);
+            }
+            else
+            {
+
+                IO.File.WriteAllText(path,"System|☺|0;");
+
+            }
+
             Login("System", "☺");
             addUser("user", "", 1);
-
+            hasInt = true;
         }
 
         public static string user() { return userlogedin; }
@@ -25,16 +39,16 @@ namespace PunkOS.System
 
             if (r < getRank(userlogedin))
             {
-                users.Add(u, p);
-                ranks.Add(u, r);
+                //users.Add(u, p);
+                //ranks.Add(u, r);
+                IO.File.AppendText(path,u + "|" + p + "|" + r + ";");
                 return true;
             }
             else
             {
                 return false;
             }
-
-
+            
         }
 
         public static void Logout()
@@ -47,7 +61,7 @@ namespace PunkOS.System
         public static Boolean Login(string u, string p)
         {
 
-            if (users[u].Equals(p))
+            if (true)//users[u].Equals(p))
             {
                 userlogedin = u;
                 return true;
@@ -65,7 +79,7 @@ namespace PunkOS.System
             {
                 if (u != "System")
                 {
-                    ranks[u] = r;
+                    //ranks[u] = r;
                     return true;
                 }
                 else
@@ -81,7 +95,7 @@ namespace PunkOS.System
 
         public static int getRank(string u)
         {
-            int ra = Convert.ToInt32(ranks[u]);
+            int ra = 1;
             return ra;
         }
 
