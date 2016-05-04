@@ -16,6 +16,7 @@ namespace PunkOS.System.IO
             return Sys.File.ReadAllText(FilePath);
         }
 
+        
         public static Byte[] ReadAllBytes(string FilePath)
         {
             return Sys.File.ReadAllBytes(FilePath);

@@ -5,14 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using Sys = PunkOS.System;
 
-namespace Programs
+namespace PunkOS.Programs
 {
-    class Shell
+    public class Shell
     {
         public static void Run(string path)
         {
             string Script = Sys.IO.File.ReadAllText(path);
             
+        }
+        public static void command(List<string> args)
+        {
+            if (args[1].Contains(":/"))
+            {
+                Run(args[1]);
+            } else {
+
+            }
+
         }
 
     }

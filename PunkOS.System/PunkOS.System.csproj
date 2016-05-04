@@ -45,6 +45,7 @@
     <Compile Include="IO\Flie.cs" />
     <Compile Include="IO\Path.cs" />
     <Compile Include="LoginSystem.cs" />
+    <Compile Include="Sound.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Utils\CommandManger.cs" />
     <Compile Include="Utils\PictureManger.cs" />

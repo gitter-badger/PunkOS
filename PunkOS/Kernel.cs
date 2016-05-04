@@ -32,7 +32,7 @@ namespace PunkOS
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("      ##      ");
 
-                
+            Commands.Init();
 
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
@@ -67,25 +67,14 @@ namespace PunkOS
             Console.Clear();
             //login code
             Console.WriteLine("PunkOS 0.0.1");
-            
+            Console.Write("$>");
         }
 
         protected override void Run()
         {
 
-
-            int i = 0;
-            do
-            {
-                //Console.Write("$>");
-                //var input = Console.ReadLine();
-                //Console.WriteLine(input);
-                //System.Manger.CommandManger.run(input);
-                i++;
-                Console.WriteLine(i);
-            } while (true);
-
-
+                Commands.Parse(Console.ReadLine());
+            Console.Write("$>");
         }
     }
 }
