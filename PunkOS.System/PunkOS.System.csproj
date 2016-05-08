@@ -46,6 +46,15 @@
     <Compile Include="IO\Path.cs" />
     <Compile Include="LoginSystem.cs" />
     <Compile Include="Sound.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Utils\CommandManger.cs" />
+    <Compile Include="Utils\PictureManger.cs" />
+    <Compile Include="Utils\Picture.cs" />
+    <Compile Include="Utils\ProgramManger.cs" />
+    <Compile Include="Utils\DisplayManger.cs" />
+    <Compile Include="Utils\Font.cs" />
+    <Compile Include="Utils\FontManger.cs" />
+    <Compile Include="MouseRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PunkOS.HAL\PunkOS.HAL.csproj">

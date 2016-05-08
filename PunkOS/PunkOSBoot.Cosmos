@@ -6,7 +6,7 @@
     <ProjectGuid>{27fcd5e7-e6aa-43a1-932b-605a5ab6dbcf}</ProjectGuid>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <Name>PunkOS.Boot</Name>
-    <BinFormat>Bin</BinFormat>
+    <BinFormat>elf</BinFormat>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -14,13 +14,13 @@
     <!-- Looks like this was a mispelled attribute. Replaced by DebugEnabled below.
     <DebugEnable>true</DebugEnable>
     -->
-    <DebugEnabled>True</DebugEnabled>
+    <DebugEnabled>true</DebugEnabled>
     <DebugMode>Source</DebugMode>
     <TraceMode>User</TraceMode>
     <EnableGDB>False</EnableGDB>
     <StartCosmosGDB>false</StartCosmosGDB>
     <VMWareEdition>Player</VMWareEdition>
-    <OutputPath>C:\Users\kaleb\Desktop\DEV\PunkOS\Debug\</OutputPath>
+    <OutputPath>C:\Users\kaleb\Desktop\DEV\PunkOS\Debug</OutputPath>
     <Name>VMware User 001</Name>
     <Description>Use VMware Player or Workstation to deploy and debug.</Description>
     <Deployment>ISO</Deployment>
@@ -30,18 +30,18 @@
     <VMware_Description>Use VMware Player or Workstation to deploy and debug.</VMware_Description>
     <VMware_Deployment>ISO</VMware_Deployment>
     <VMware_Launch>VMware</VMware_Launch>
-    <VMware_DebugEnabled>True</VMware_DebugEnabled>
+    <VMware_DebugEnabled>true</VMware_DebugEnabled>
     <VMware_DebugMode>Source</VMware_DebugMode>
     <VMware_VisualStudioDebugPort>Pipe: Cosmos\Serial</VMware_VisualStudioDebugPort>
     <VMware_VMwareEdition>Player</VMware_VMwareEdition>
-    <VMware_OutputPath>C:\Users\kaleb\Desktop\DEV\PunkOS\Debug\</VMware_OutputPath>
+    <VMware_OutputPath>C:\Users\kaleb\Desktop\DEV\PunkOS\Debug</VMware_OutputPath>
     <VMware_EnableGDB>False</VMware_EnableGDB>
     <VMware_StartCosmosGDB>false</VMware_StartCosmosGDB>
     <IntelEdison_Name>PunkOSBoot</IntelEdison_Name>
     <IntelEdison_Description>Connect to Intel Edison device to deploy and debug.</IntelEdison_Description>
     <IntelEdison_Deployment>BinaryImage</IntelEdison_Deployment>
     <IntelEdison_Launch>IntelEdison</IntelEdison_Launch>
-    <IntelEdison_DebugEnabled>True</IntelEdison_DebugEnabled>
+    <IntelEdison_DebugEnabled>true</IntelEdison_DebugEnabled>
     <IntelEdison_DebugMode>Source</IntelEdison_DebugMode>
     <IntelEdison_VisualStudioDebugPort>Pipe: Cosmos\Serial</IntelEdison_VisualStudioDebugPort>
     <IntelEdison_VMwareEdition>Player</IntelEdison_VMwareEdition>
@@ -67,7 +67,7 @@
     <USB_DebugMode>Source</USB_DebugMode>
     <USB_VisualStudioDebugPort>Pipe: Cosmos\Serial</USB_VisualStudioDebugPort>
     <USB_VMwareEdition>Player</USB_VMwareEdition>
-    <USB_OutputPath>C:\Users\kaleb\Desktop\DEV\PunkOS\Debug\</USB_OutputPath>
+    <USB_OutputPath>bin\Debug\</USB_OutputPath>
     <USB_EnableGDB>False</USB_EnableGDB>
     <USB_StartCosmosGDB>false</USB_StartCosmosGDB>
     <StackCorruptionDetectionEnabled>True</StackCorruptionDetectionEnabled>
@@ -104,8 +104,6 @@
     <VMware_IgnoreDebugStubAttribute>False</VMware_IgnoreDebugStubAttribute>
     <IntelEdison_IgnoreDebugStubAttribute>False</IntelEdison_IgnoreDebugStubAttribute>
     <ISO_IgnoreDebugStubAttribute>False</ISO_IgnoreDebugStubAttribute>
-    <PXE_IgnoreDebugStubAttribute>False</PXE_IgnoreDebugStubAttribute>
-    <USB_IgnoreDebugStubAttribute>False</USB_IgnoreDebugStubAttribute>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cosmos.Core.Plugs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983" />

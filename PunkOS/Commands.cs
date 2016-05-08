@@ -16,8 +16,8 @@ namespace PunkOS
             commands[0].sethelp("runs lua script");
             add(new commandBase("shell", new commandBase.command(Programs.Shell.command)));
             commands[1].sethelp("Runs Things");
-            add(new commandBase("echo", new commandBase.command(Commands_command.echo)));
-            commands[2].sethelp("echos back.  /n for new line");
+            add(new commandBase("echo",new commandBase.command(Commands_command.echo)));
+            commands[2].sethelp("echos back");
         }
         public static void add(commandBase com)
         {
@@ -124,26 +124,23 @@ namespace PunkOS
         public static void echo(List<string> args)
         {
             int i = 1;
-            while (args[i] != null)
-            {
-                if (args[i] != "/n")
-                {
+            while (args[i] != null) {
+                if (args[i] != "/n") {
                     Console.Write(args[i] + " ");
-                }
-                else
+                } else
                 {
 
                     Console.WriteLine();
 
                 }
-                i++;
+                    i++;
             }
         }
 
 
         public static void nothing(List<string> args)
         {
-
+           
 
         }
 
