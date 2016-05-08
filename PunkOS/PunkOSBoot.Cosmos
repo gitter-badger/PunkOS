@@ -19,7 +19,7 @@
     <TraceMode>User</TraceMode>
     <EnableGDB>False</EnableGDB>
     <StartCosmosGDB>false</StartCosmosGDB>
-    <VMWareEdition>Workstation</VMWareEdition>
+    <VMWareEdition>Player</VMWareEdition>
     <OutputPath>C:\Users\kaleb\Desktop\DEV\PunkOS\Debug\</OutputPath>
     <Name>VMware User 001</Name>
     <Description>Use VMware Player or Workstation to deploy and debug.</Description>
@@ -33,7 +33,7 @@
     <VMware_DebugEnabled>True</VMware_DebugEnabled>
     <VMware_DebugMode>Source</VMware_DebugMode>
     <VMware_VisualStudioDebugPort>Pipe: Cosmos\Serial</VMware_VisualStudioDebugPort>
-    <VMware_VMwareEdition>Workstation</VMware_VMwareEdition>
+    <VMware_VMwareEdition>Player</VMware_VMwareEdition>
     <VMware_OutputPath>C:\Users\kaleb\Desktop\DEV\PunkOS\Debug\</VMware_OutputPath>
     <VMware_EnableGDB>False</VMware_EnableGDB>
     <VMware_StartCosmosGDB>false</VMware_StartCosmosGDB>
@@ -41,7 +41,7 @@
     <IntelEdison_Description>Connect to Intel Edison device to deploy and debug.</IntelEdison_Description>
     <IntelEdison_Deployment>BinaryImage</IntelEdison_Deployment>
     <IntelEdison_Launch>IntelEdison</IntelEdison_Launch>
-    <IntelEdison_DebugEnabled>true</IntelEdison_DebugEnabled>
+    <IntelEdison_DebugEnabled>True</IntelEdison_DebugEnabled>
     <IntelEdison_DebugMode>Source</IntelEdison_DebugMode>
     <IntelEdison_VisualStudioDebugPort>Pipe: Cosmos\Serial</IntelEdison_VisualStudioDebugPort>
     <IntelEdison_VMwareEdition>Player</IntelEdison_VMwareEdition>
