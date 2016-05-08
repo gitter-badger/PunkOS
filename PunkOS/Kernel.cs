@@ -5,12 +5,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Sys = Cosmos.System;
+using Python.Runtime;
+using AluminumLua;
 
 
 namespace PunkOS
 {
     public class Kernel : Sys.Kernel
     {
+        readonly string OSv = "0.0.2.0";
         //private PunkOS.System.Utils.DisplayManger Display;
         private VFSBase myVFS;
         private string[] UserData;
@@ -22,7 +25,7 @@ namespace PunkOS
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("              ");
-            
+
             //System.LoginSystem.Init();
 
             myVFS = new CosmosVFS();
@@ -37,13 +40,25 @@ namespace PunkOS
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("    ######    ");
+            Console.WriteLine("loading Python");
 
-
+            //PythonEngine.Initialize();
 
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("   ########   ");
+            Console.WriteLine("Loading Lua5.2");
 
+            var context = new LuaContext();
+            context.SetGlobal("OSv", OSv);
+            //context.SetGlobal(,);
+            context.AddBasicLibrary();
+            context.AddIoLibrary();
+
+            // ...
+
+            //var Lparser = new LuaParser(context,@"0:/Core/lua/main.lua"); // < or leave file_name out to read stdin
+            //Lparser.Parse();
 
 
             Console.Clear();
@@ -51,10 +66,10 @@ namespace PunkOS
             Console.WriteLine("  ##########  ");
 
 
-
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("##############");
+
 
             Console.Clear();
             //Console.WriteLine("PunkOS Login");
@@ -66,14 +81,18 @@ namespace PunkOS
             //mDebugger.Send(pass);
             Console.Clear();
             //login code
-            Console.WriteLine("PunkOS 0.0.1");
+
+
+            Console.WriteLine("PunkOS 0.0.2.1");
+            //Console.WriteLine(line);
+            Console.WriteLine("By Kaleb Mcghie");
             Console.Write("$>");
         }
 
         protected override void Run()
         {
 
-                Commands.Parse(Console.ReadLine());
+            Commands.Parse(Console.ReadLine());
             Console.Write("$>");
         }
     }
