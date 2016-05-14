@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace PunkOS
 {
@@ -16,8 +17,12 @@ namespace PunkOS
             commands[0].sethelp("runs lua script");
             add(new commandBase("shell", new commandBase.command(Programs.Shell.command)));
             commands[1].sethelp("Runs Things");
-            add(new commandBase("echo",new commandBase.command(Commands_command.echo)));
-            commands[2].sethelp("echos back");
+            add(new commandBase("echo", new commandBase.command(Commands_command.echo)));
+            commands[2].sethelp("echo's back");
+            add(new commandBase("help", new commandBase.command(help)));
+            commands[3].sethelp("");
+            //add(new commandBase("edit", new commandBase.command(Commands_command.edit)));
+            //commands[4].sethelp("Edit Files");
         }
         public static void add(commandBase com)
         {
@@ -26,29 +31,18 @@ namespace PunkOS
         }
         public static void Parse(string text)
         {
-            bool didfind = false;
-            if (text.Replace(" ", "") != "")
+            try
             {
                 List<string> tokens = Tokenizer.getTokens(text);
-                for (int i = 0; i < commands.Length; i++)
-                {
-                    if (tokens[0].ToLower() == commands[i].text)
-                    {
-                        commands[i].execute(text);
-                        didfind = true;
-                        break;
-                    }
-                }
-                if (!didfind)
-                {
 
-                    Console.WriteLine("Command not found.");
+                getCommand(tokens[0]).execute(text);
 
-                }
             }
-            else
+            catch (Exception exception)
             {
-                Console.WriteLine("Error");
+
+                Console.WriteLine(exception);
+
             }
         }
         public static commandBase getCommand(string text)
@@ -73,6 +67,23 @@ namespace PunkOS
             }
             return "Command not found";
         }
+
+
+        public static void help(List<string> args)
+        {
+
+            if (args[1] == null)
+            {
+
+                for (int i = 0; i < commands.Length; i++)
+                {
+                    Console.WriteLine(commands[i].gethelp());
+                }
+
+            }
+
+        }
+
     }
     class commandBase
     {
@@ -124,23 +135,20 @@ namespace PunkOS
         public static void echo(List<string> args)
         {
             int i = 1;
-            while (args[i] != null) {
-                if (args[i] != "/n") {
-                    Console.Write(args[i] + " ");
-                } else
-                {
+            while (args[i] != null)
+            {
 
-                    Console.WriteLine();
+                Console.WriteLine(args[i].Replace("/n ", Environment.NewLine));
+                i++;
 
-                }
-                    i++;
             }
+            //Console.WriteLine("");
         }
-
 
         public static void nothing(List<string> args)
         {
-           
+
+            Console.WriteLine("Command " + args[0] + " not found.");
 
         }
 

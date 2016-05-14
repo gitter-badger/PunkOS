@@ -1,43 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PunkOS
 {
-    class UserSystem
+   public class UserSystem
     {
         static UserBase[] users = new UserBase[4];
         private string logedin_user;
         private Boolean logedin = false;
         static int iuser = 0;
 
-        public static Boolean Login(string user,string password)
+        public string User_logedin() { return logedin_user; }
+
+        public Boolean isLogedin() { return logedin; }
+
+        public Boolean Login(string user,string password)
         {
-
-            for (int i = 0; i < users.Length; i++)
+            int i = 0;
+            while (i < users.Length)
             {
-                if (user == users[i].getusername())
+                if (user == users[i].getusername() )// & users[i].login(password) == true)
                 {
-                    if (users[i].login(password)  == true)
-                    {
-                        return true;
-                    }
-                    return false;
-
+                        logedin = true;
+                        return true;                  
                 }
+                i++;
                 return false;
             }
             return false;
-
         }
 
         public static void Init()
         {
 
-            add(new UserBase("system","♥☺☻☺♥",0));
-            
+            add(new UserBase("system","notpassword",0));
+            add(new UserBase("user", "pass", 1));
+
 
         }
 
@@ -48,7 +45,7 @@ namespace PunkOS
         }
 
     }
-    class UserBase
+   public class UserBase
     {
         int _rank ;
         string _username = "";
@@ -78,7 +75,9 @@ namespace PunkOS
         }
         public void setrank(int rank)
         {
-            _rank = rank;
+            if (true) {
+                _rank = rank;
+            }
         }
 
         public string getusername()

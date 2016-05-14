@@ -15,6 +15,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <OutputPath>bin\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -29,6 +30,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Programs\Lua.cs" />
     <Compile Include="Programs\Shell.cs" />
+    <Compile Include="UserSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PunkOS.Core\PunkOS.Core.csproj">
@@ -43,6 +45,9 @@
       <Project>{b847884a-8f96-4a3b-b3f1-646836d3d57e}</Project>
       <Name>PunkOS.System</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

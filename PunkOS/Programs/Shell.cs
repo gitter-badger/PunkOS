@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Sys = PunkOS.System;
+using System.IO;
 
 namespace PunkOS.Programs
 {
@@ -11,8 +11,13 @@ namespace PunkOS.Programs
     {
         public static void Run(string path)
         {
-            string Script = Sys.IO.File.ReadAllText(path);
-            
+            string[] Script = File.ReadAllLines(path);
+
+            for (int i = 0; Script[i] != null; i++)
+            {
+                Commands.Parse(Script[i]);
+            }
+
         }
         public static void command(List<string> args)
         {

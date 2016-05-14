@@ -1,6 +1,6 @@
 ﻿using Cosmos.System.FileSystem;
 using Cosmos.System.FileSystem.VFS;
-using System.IO;
+using sys = System.IO;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,6 +27,8 @@ namespace PunkOS
 
             myVFS = new CosmosVFS();
             VFSManager.RegisterVFS(myVFS);
+            myVFS.Initialize();
+            UserSystem.Init();
 
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
@@ -56,24 +58,21 @@ namespace PunkOS
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("##############");
 
+            
+            //Commands.Parse("shell 0:\test.txt");
             Console.Clear();
-            //Console.WriteLine("PunkOS Login");
-            //Console.WriteLine("Username:");
-            //string user = Console.ReadLine();
-            //mDebugger.Send(user);
-            //Console.WriteLine("Password:");
-            //string pass = Console.ReadLine();
-            //mDebugger.Send(pass);
-            Console.Clear();
-            //login code
             Console.WriteLine("PunkOS 0.0.1");
             Console.Write("$>");
         }
 
         protected override void Run()
         {
-
-                Commands.Parse(Console.ReadLine());
+            string input = Console.ReadLine();
+            string inputtemp = input;
+            if (inputtemp.Replace(" ","") != "")
+            {
+                Commands.Parse(input);
+            }
             Console.Write("$>");
         }
     }
