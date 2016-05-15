@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Sys = Cosmos.System;
-
+using AluminumLua;
 
 namespace PunkOS
 {
@@ -14,7 +14,7 @@ namespace PunkOS
         //private PunkOS.System.Utils.DisplayManger Display;
         private VFSBase myVFS;
         private string[] UserData;
-
+        private string OSv = "0.3.2.1";
 
         protected override void BeforeRun()
         {
@@ -40,7 +40,24 @@ namespace PunkOS
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("    ######    ");
 
+        // lua not working needs plug
 
+        //Error: Exception: System.Exception: Native code encountered, plug required. Please see https://github.com/CosmosOS/Cosmos/wiki/Plugs). System.IRuntimeMethodInfo  System.Delegate.FindMethodHandle().
+        //1 > Called from:
+        //1 > System.Delegate::System.Reflection.MethodInfo GetMethodImpl()
+        //1 > System.Delegate::System.Reflection.MethodInfo get_Method()
+        //1 > AluminumLua.LuaObject::System.String ToString()
+
+            //var context = new LuaContext();
+            //context.AddBasicLibrary();
+            //context.AddIoLibrary();
+
+            //context.SetGlobal("OSv", OSv);
+            //context.SetGlobal("random_string", "hello");
+            // ...
+
+            //var parser = new LuaParser(context); // < or leave file_name out to read stdin
+            //parser.Parse();
 
             Console.Clear();
             Console.WriteLine("Booting PunkOS");

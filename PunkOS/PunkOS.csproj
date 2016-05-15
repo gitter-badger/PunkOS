@@ -33,6 +33,10 @@
     <Compile Include="UserSystem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Lua\Lua.csproj">
+      <Project>{29cd39fe-27d9-4037-b75c-fc3d61b5020e}</Project>
+      <Name>Lua</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PunkOS.Core\PunkOS.Core.csproj">
       <Project>{b21e5460-cf3b-44ff-bcb4-2b7f5212f0d0}</Project>
       <Name>PunkOS.Core</Name>
@@ -44,6 +48,10 @@
     <ProjectReference Include="..\PunkOS.System\PunkOS.System.csproj">
       <Project>{b847884a-8f96-4a3b-b3f1-646836d3d57e}</Project>
       <Name>PunkOS.System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\python\runtime\Python.Runtime.csproj">
+      <Project>{097b4ac0-74e9-4c58-bcf8-c69746ec8271}</Project>
+      <Name>Python.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
