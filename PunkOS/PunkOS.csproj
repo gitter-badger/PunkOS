@@ -26,11 +26,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands.cs" />
+    <Compile Include="Environment.cs" />
     <Compile Include="Kernel.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="programing_languages.cs" />
     <Compile Include="Programs\Lua.cs" />
+    <Compile Include="Programs\SharpOSApps.cs" />
     <Compile Include="Programs\Shell.cs" />
+    <Compile Include="SharpOS\Kernel.cs" />
+    <Compile Include="SharpOS\IApplication.cs" />
     <Compile Include="UserSystem.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

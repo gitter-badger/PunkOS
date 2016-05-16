@@ -3,42 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AluminumLua;
+
 namespace PunkOS.Programs
 {
    public class Lua
     {
 
-        public static void Init()
-        {
-
-            // lua not working needs plug
-
-            //Error: Exception: System.Exception: Native code encountered, plug required. Please see https://github.com/CosmosOS/Cosmos/wiki/Plugs). System.IRuntimeMethodInfo  System.Delegate.FindMethodHandle().
-            //1 > Called from:
-            //1 > System.Delegate::System.Reflection.MethodInfo GetMethodImpl()
-            //1 > System.Delegate::System.Reflection.MethodInfo get_Method()
-            //1 > AluminumLua.LuaObject::System.String ToString()
-
-            //var context = new LuaContext();
-            //context.AddBasicLibrary();
-            //context.AddIoLibrary();
-
-            //context.SetGlobal("OSv", OSv);
-            //context.SetGlobal("random_string", "hello");
-            // ...
-
-            //var parser = new LuaParser(context); // < or leave file_name out to read stdin
-            //parser.Parse();
-
-        }
 
         public static void Command(List<string> args)
         {
-            if (args[1] == "")
+            Console.WriteLine("Lua Is Not Workinf It need Some Plugs");
+            if (args[1].Contains("0:/"))
             {
-                //Script.RunFile(args[2]);
+
+                //var parser = new LuaParser(programing_languages.context, args[1]);
+                
+                //parser.Parse();
+
             }
-            
+            else
+            {
+
+                Console.WriteLine("AluminumLua 0.1 (c) 2011 Alex Corrado modded by zarlo cooman to work with PunkOS");
+
+            }
+
 
         }
 

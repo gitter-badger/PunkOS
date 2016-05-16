@@ -4,33 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AluminumLua;
-using Python.Runtime;
+
 namespace PunkOS
 {
     class programing_languages
     {
 
 
-        public LuaContext context = new LuaContext();
+        //public static LuaContext context = new LuaContext();
 
         public static void Init()
         {
-
+            // lua not working needs plug
             Lua();
 
         }
 
-        public static void Python()
-        {
-
-            
-
-        }
 
         public static void Lua()
         {
 
-            // lua not working needs plug
+            
 
             //Error: Exception: System.Exception: Native code encountered, plug required. Please see https://github.com/CosmosOS/Cosmos/wiki/Plugs). System.IRuntimeMethodInfo  System.Delegate.FindMethodHandle().
             //1 > Called from:

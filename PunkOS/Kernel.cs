@@ -40,7 +40,7 @@ namespace PunkOS
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("    ######    ");
 
-            Programs.Lua.Init();
+            programing_languages.Init();
 
             Console.Clear();
             Console.WriteLine("Booting PunkOS");
@@ -58,8 +58,6 @@ namespace PunkOS
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("##############");
 
-            
-            //Commands.Parse("shell 0:\test.txt");
             Console.Clear();
             Console.WriteLine("PunkOS 0.0.1");
             Console.Write("$>");

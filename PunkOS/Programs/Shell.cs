@@ -9,21 +9,20 @@ namespace PunkOS.Programs
 {
     public class Shell
     {
-        public static void Run(string path)
+        public static void RunATSH(string path)
         {
-            string[] Script = File.ReadAllLines(path);
 
-            for (int i = 0; Script[i] != null; i++)
+            string[] lines = File.ReadAllLines(path);
+            foreach (string line in lines)
             {
-                Commands.Parse(Script[i]);
+                Commands.Parse(line);
             }
-
         }
         public static void command(List<string> args)
         {
-            if (args[1].Contains(":/"))
+            if (args[1].ToLower().EndsWith(".atsh"))
             {
-                Run(args[1]);
+                RunATSH(args[1]);
             } else {
 
             }
