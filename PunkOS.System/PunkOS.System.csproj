@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cosmos.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86" />
+    <Reference Include="Cosmos.HAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ae71220097cb983, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -43,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="SharpOS\Keyboard.cs" />
     <Compile Include="Sound.cs" />
     <Compile Include="Utils\CommandManger.cs" />
     <Compile Include="Utils\PictureManger.cs" />

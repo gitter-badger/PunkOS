@@ -16,5 +16,14 @@ namespace PunkOS.Programs
 
         }
 
+
+
+        public static void command(List<string> args)
+        {
+            
+
+
+        }
+
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="CPU.cs" />
     <Compile Include="Drivers\Display\DisplayDriverVGA.cs" />
     <Compile Include="Drivers\MouseDriver.cs" />
+    <Compile Include="SharpOS\KBListener.cs" />
     <Compile Include="time.cs" />
   </ItemGroup>
   <ItemGroup>
