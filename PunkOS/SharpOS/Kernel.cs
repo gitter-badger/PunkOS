@@ -9,6 +9,7 @@ namespace SharpOS
 {
     public class Kernel
     {
+        // this dose not get used
         public void StartApplicationLoop(IApplication app, string[] args)
         {
             app.Start(args);

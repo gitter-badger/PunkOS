@@ -33,6 +33,7 @@
     <Compile Include="Programs\Lua.cs" />
     <Compile Include="Programs\SharpOSApps.cs" />
     <Compile Include="Programs\Shell.cs" />
+    <Compile Include="SharpOS\apps\nullapp.cs" />
     <Compile Include="SharpOS\Kernel.cs" />
     <Compile Include="SharpOS\IApplication.cs" />
     <Compile Include="UserSystem.cs" />

@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
 
 namespace PunkOS
 {
     static class Commands
     {
-        static commandBase[] commands = new commandBase[4];
+        static commandBase[] commands = new commandBase[256];
         static int icommand = 0;
         public static void Init()
         {
@@ -20,10 +16,42 @@ namespace PunkOS
             add(new commandBase("echo", new commandBase.command(Commands_command.echo)));
             commands[2].sethelp("echo's back");
             add(new commandBase("help", new commandBase.command(help)));
-            commands[3].sethelp("");
+            commands[3].sethelp("prints help info");
+            add(new commandBase("sharpapps", new commandBase.command(PunkOS.Programs.SharpOSApps.command)));
+            commands[4].sethelp("lets you runn sharpos apps (not working)");
             //add(new commandBase("edit", new commandBase.command(Commands_command.edit)));
-            //commands[4].sethelp("Edit Files");
+            //commands[].sethelp("Edit Files");
         }
+        // school work
+        // tonality
+        // the scale used to write the song
+        // major/minor/other
+        //
+        //
+        //
+        //
+
+
+        /// <summary>
+        /// lest you set the help info of a program
+        /// </summary>
+        /// <param name="program">name fo program</param>
+        /// <param name="helpinfo">the help info</param>
+        public static void sethelp(string program,string helpinfo)
+        {
+
+            getCommand(program).sethelp(helpinfo);
+        }
+
+        public static void add(commandBase com , string helpinfo)
+        {
+
+            commands[icommand] = com;
+            commands[icommand].sethelp(helpinfo);
+            icommand++;
+
+        }
+
         public static void add(commandBase com)
         {
             commands[icommand] = com;
