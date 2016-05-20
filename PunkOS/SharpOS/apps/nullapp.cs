@@ -38,7 +38,7 @@ namespace SharpOS.Apps
 
         public override void Start(string[] args)
         {
-            Console.WriteLine("SharpOS not Found" + args);
+            Console.WriteLine("SharpOS app not Found" + args);
         }
     }
 }

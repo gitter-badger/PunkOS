@@ -21,7 +21,7 @@ namespace PunkOS
         }
 
 
-        public static void Lua()
+        static void Lua()
         {
 
             
@@ -35,7 +35,7 @@ namespace PunkOS
             //context.AddBasicLibrary();
             //context.AddIoLibrary();
             //context.SetGlobal("OSv", OSv);
-            //context.SetGlobal("random_string", "hello");
+            //context.SetGlobal("command", "hello");
             
             //var parser = new LuaParser(context); // < or leave file_name out to read stdin
             //parser.Parse();

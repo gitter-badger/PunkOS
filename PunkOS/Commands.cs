@@ -19,17 +19,11 @@ namespace PunkOS
             commands[3].sethelp("prints help info");
             add(new commandBase("sharpapps", new commandBase.command(PunkOS.Programs.SharpOSApps.command)));
             commands[4].sethelp("lets you runn sharpos apps (not working)");
+            add(new commandBase("null",new commandBase.command(Commands_command.nothing)));
+            commands[5].sethelp("command error");
             //add(new commandBase("edit", new commandBase.command(Commands_command.edit)));
             //commands[].sethelp("Edit Files");
         }
-        // school work
-        // tonality
-        // the scale used to write the song
-        // major/minor/other
-        //
-        //
-        //
-        //
 
 
         /// <summary>
@@ -37,13 +31,17 @@ namespace PunkOS
         /// </summary>
         /// <param name="program">name fo program</param>
         /// <param name="helpinfo">the help info</param>
-        public static void sethelp(string program,string helpinfo)
+        public static void sethelp(string program, string helpinfo)
         {
-
             getCommand(program).sethelp(helpinfo);
         }
 
-        public static void add(commandBase com , string helpinfo)
+        /// <summary>
+        /// add a command to the system
+        /// </summary>
+        /// <param name="com">command info</param>
+        /// <param name="helpinfo">help info</param>
+        public static void add(commandBase com, string helpinfo)
         {
 
             commands[icommand] = com;
@@ -52,6 +50,10 @@ namespace PunkOS
 
         }
 
+        /// <summary>
+        /// add a command to the system
+        /// </summary>
+        /// <param name="com">command info</param>
         public static void add(commandBase com)
         {
             commands[icommand] = com;
@@ -77,12 +79,12 @@ namespace PunkOS
         {
             for (int i = 0; i < commands.Length; i++)
             {
-                if (text.Split(' ')[0].ToLower() == commands[i].text)
+                if (text.Split(' ')[0].ToLower() == commands[i].text.ToLower())
                 {
                     return commands[i];
                 }
             }
-            return new commandBase("null", new commandBase.command(Commands_command.nothing));
+            return commands[5];
         }
         public static string getCommandHelp(string text)
         {
@@ -96,24 +98,18 @@ namespace PunkOS
             return "Command not found";
         }
 
-
         public static void help(List<string> args)
         {
 
-            if (args[1] == null)
+            for (int i = 0; i < commands.Length; i++)
             {
-
-                for (int i = 0; i < commands.Length; i++)
-                {
-                    Console.WriteLine(commands[i].gethelp());
-                }
-
+                Console.WriteLine(commands[i].gethelp());
             }
 
         }
 
     }
-    class commandBase
+    public class commandBase
     {
         string _help = "";
         public commandBase(string _text, command _command)
@@ -137,7 +133,8 @@ namespace PunkOS
         public string text;
         public delegate void command(List<string> args);
     }
-    class Tokenizer
+
+    public class Tokenizer
     {
         public const char split = ' ';
         public const char quote = '"';
@@ -146,16 +143,18 @@ namespace PunkOS
             bool isinquotes = false;
             List<string> tokens = new List<string> { "" };
             string temp = "";
+
             foreach (char c in s)
             {
                 temp = tokens[tokens.Count - 1];
                 if (c == quote) { isinquotes = !isinquotes; }
-                else if (c == split && isinquotes == false) { tokens.Add(""); }
+                else if (c == split && isinquotes == false ) { tokens.Add(""); }
                 else { tokens[tokens.Count - 1] += c; }
             }
             return tokens;
         }
     }
+
     class Commands_command
     {
 

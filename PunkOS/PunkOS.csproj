@@ -29,6 +29,7 @@
     <Compile Include="Environment.cs" />
     <Compile Include="Kernel.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Libraries\IO.cs" />
     <Compile Include="programing_languages.cs" />
     <Compile Include="Programs\Lua.cs" />
     <Compile Include="Programs\SharpOSApps.cs" />

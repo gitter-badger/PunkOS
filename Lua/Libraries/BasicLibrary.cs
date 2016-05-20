@@ -29,56 +29,65 @@ using System.Text;
 
 using AluminumLua.Executors;
 
-namespace AluminumLua {
-	
-	public partial class LuaContext {
-		
-		public void AddBasicLibrary ()
-		{
-			SetGlobal ("print", print);
-			SetGlobal ("dofile", dofile);
-			SetGlobal ("type", type);
-		}
-		
-		private LuaObject print (LuaObject [] args)
-		{
-			var first = true;
-			var buf = new StringBuilder ();
-			
-			foreach (var arg in args) {
-				
-				if (!first)
-					buf.Append ('\t');
-				
-				buf.Append (arg.ToString ());
-				first = false;
-			}
-			
-			Console.WriteLine (buf.ToString ());
-			return true;
-		}
-		
-		private LuaObject dofile (LuaObject [] args)
-		{
-			LuaParser parser;
-			
-			var exec = LuaSettings.Executor (this);
-			var file = args.FirstOrDefault ();
-			
-			if (file.IsNil)
-				parser = new LuaParser (exec); // read from stdin
-			else
-				parser = new LuaParser (exec, file.AsString ());
-			
-			parser.Parse ();
-			
-			return exec.Result ();
-		}
-		
-		private LuaObject type (LuaObject [] args)
-		{
-			return Enum.GetName (typeof (LuaType), args.First ().Type);
-		}
-	}
+namespace AluminumLua
+{
+
+    public partial class LuaContext
+    {
+
+        public void AddBasicLibrary()
+        {
+            SetGlobal("print", print);
+            SetGlobal("dofile", dofile);
+            SetGlobal("type", type);
+        }
+
+        private LuaObject Command(LuaObject[] args)
+        {
+            
+            return true;
+        }
+
+        private LuaObject print(LuaObject[] args)
+        {
+            var first = true;
+            var buf = new StringBuilder();
+
+            foreach (var arg in args)
+            {
+
+                if (!first)
+                    buf.Append('\t');
+
+                buf.Append(arg.ToString());
+                first = false;
+            }
+
+            Console.WriteLine(buf.ToString());
+            return true;
+        }
+
+        private LuaObject dofile(LuaObject[] args)
+        {
+            LuaParser parser;
+
+            var exec = LuaSettings.Executor(this);
+            var file = args.FirstOrDefault();
+
+            if (file.IsNil)
+                parser = new LuaParser(exec); // read from stdin
+            else
+                parser = new LuaParser(exec, file.AsString());
+
+            parser.Parse();
+
+            return exec.Result();
+        }
+
+        private LuaObject type(LuaObject[] args)
+        {
+            return Enum.GetName(typeof(LuaType), args.First().Type);
+        }
+    }
 }
 

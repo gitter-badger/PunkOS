@@ -8,7 +8,7 @@ namespace PunkOS.Programs
 {
     public class SharpOSApps
     {
-        static SharpOS_Apps[] apps = new SharpOS_Apps[4294967295];
+        static SharpOS_Apps[] apps = new SharpOS_Apps[256];
         static int iapp = 0;
         public static void Init()
         {

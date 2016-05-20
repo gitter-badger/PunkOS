@@ -14,7 +14,7 @@ namespace PunkOS
         //private PunkOS.System.Utils.DisplayManger Display;
         private VFSBase myVFS;
         private string[] UserData;
-        private string OSv = "0.3.2.1";
+        public static string OSv = "0.3.2.1";
 
         protected override void BeforeRun()
         {
@@ -58,7 +58,10 @@ namespace PunkOS
             Console.WriteLine("Booting PunkOS");
             Console.WriteLine("##############");
 
+            Environment_var.Init();
+
             Console.Clear();
+            
             Console.WriteLine("PunkOS 0.0.1");
             Console.Write("$>");
         }

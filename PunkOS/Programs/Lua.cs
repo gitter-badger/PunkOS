@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using AluminumLua;
 
 namespace PunkOS.Programs
@@ -13,7 +11,7 @@ namespace PunkOS.Programs
 
         public static void Command(List<string> args)
         {
-            Console.WriteLine("Lua Is Not Workinf It need Some Plugs");
+            Console.WriteLine("Lua Is Not Working It need Some Plugs");
             if (args[1].Contains("0:/"))
             {
 
@@ -22,10 +20,13 @@ namespace PunkOS.Programs
                 //parser.Parse();
 
             }
-            else
+            if(args[1] == "help")
             {
 
                 Console.WriteLine("AluminumLua 0.1 (c) 2011 Alex Corrado modded by zarlo cooman to work with PunkOS");
+
+            }else
+            {
 
             }
 
